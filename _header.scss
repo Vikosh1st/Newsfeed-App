@@ -1,0 +1,38 @@
+header {
+    height: 90px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: $secondary-color;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, $primary-color, $secondary-color);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, $primary-color, $secondary-color); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.container {
+    width: 95%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    outline: solid 2px red;
+}
+
+img {
+    height: 75px;
+    outline: solid 2px red;
+}
+
+.searchForm {
+    position: relative;
+    width: 300px;
+    outline: solid 2px red;
+}
+
+.searchFormButton {
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+a {
+    outline: solid 2px red;
+}
