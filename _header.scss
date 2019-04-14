@@ -1,5 +1,5 @@
 header {
-    height: 90px;
+    height: 80px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -13,26 +13,70 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    outline: solid 2px red;
 }
 
-img {
-    height: 75px;
-    outline: solid 2px red;
+.logo {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
+    img {
+        height: 60px;
+        margin-right: 15px;
+    }
+
+    h1 {
+        font-size: 15px;
+        color: white;
+    }
+}
+.searchBar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    form {
+        width: 400px;
+        display: flex;
+        justify-content: center;
+        position: relative;
+        
+        input {
+            height: 40px;
+            width: 100%;
+            border-radius: 20px;
+            font-size: 16px;
+            padding-left: 15px;
+
+        }
+
+        input:focus {
+            outline: none;
+        }
+
+        button {
+            position: absolute;
+            right: 0;
+            font-size: 16px;
+            border-radius: 20px;
+            padding: 9px;
+            z-index: 1;
+        }
+    }
 }
 
-.searchForm {
-    position: relative;
-    width: 300px;
-    outline: solid 2px red;
-}
+.login {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
 
-.searchFormButton {
-    position: absolute;
-    right: 0;
-    top: 0;
-}
+    p {
+        color: white;
+    }
 
-a {
-    outline: solid 2px red;
+    img {
+        height: 50px;
+        border-radius: 50%;
+        margin-left: 15px;
+    }
 }
