@@ -2,6 +2,7 @@ body {
   margin: 0;
   font-family: 'Roboto', sans-serif;
   margin: 0 auto;
+  background: #f0f0f0;
 }
 
 header {
@@ -148,6 +149,7 @@ nav {
       -ms-flex-pack: justify;
           justify-content: space-between;
   border: solid 1px lightgray;
+  background: white;
 }
 
 nav .navButtons a {
@@ -215,6 +217,7 @@ section .article {
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
+  background: white;
 }
 
 section .article .articleImage img {
