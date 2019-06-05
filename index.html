@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>My NBA newsfeed App</title>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/> 
+        <meta name="description" content="My newsfeed app description"/>
+        <meta name="keywords" content="News, NBA, bas"/>
+        <meta name="robots" content="follow"/>
+        <meta name="author" content="Victor Bondariu"/>
+        <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+        <link rel="stylesheet" href="index.css">   
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    </head>
+
+    <body>
+        <header>
+            <div class="container">
+                <div class="logo">
+                    <img src="images/nba-logo-transparent.png" alt="NBA Logo">
+                    <h1>NBA<br>News</h1>
+                </div>
+                <div class="searchBar">
+                    <button class="toggleSearch"><i class="fas fa-search"></i></button>
+                    <form class="searchform">
+                        <input type="search" name="search" placeholder="Search for your favorite team here">
+                        <button><i class="fas fa-search"></i></button>
+                    </form>
+                </div>
+                <div class="login">
+                    <p>Victor</p>
+                    <a href="#"><img src="/Newsfeed-App/images/Profile.png" alt="profile picture"></a>
+                </div>
+            </div>
+        </header>
+        
+        <main>
+            <!-- Navigation Tabs -->
+            <nav>
+                <div class="navButtons">
+                    <a class="border tabLink active" onclick="openTab(event,'headlines');">Headlines</a>
+                    <a class="border tabLink" onclick="openTab(event,'playOffs');">PlayOffs</a>
+                    <a class="border tabLink" onclick="openTab(event,'stories');">Stories</a>
+                    <a class="border tabLink" onclick="openTab(event,'teams');">Teams</a>
+                    <a class="border tabLink" onclick="openTab(event,'players');">Players</a>
+                </div>
+                <div class="navFilter">
+                    <a href="#"><i class="fas fa-filter"></i></a>
+                </div>
+            </nav>
+
+            <!-- Headlines tab section -->
+            <section id="headlines" class="tabContent">
+                <div class="article article1">
+                    <img src="/Newsfeed-App/images/dunk1.jpg">
+                    <div class="articleInfo">
+                        <h3>Article 1</h3>
+                        <p>Nascetur ridiculus mus mauris vitae ultricies leo. Adipiscing commodo elit at imperdiet. Consequat nisl vel pretium lectus quam.</p>
+                        <a class="more" href="#">Show More</a>
+                    </div>
+                </div>
+                <div class="article article2">
+                    <img src="/Newsfeed-App/images/dunk1.jpg">
+                    <div class="articleInfo">
+                        <h3>Article 2</h3>
+                        <p>Nascetur ridiculus mus mauris vitae ultricies leo. Adipiscing commodo elit at imperdiet. Consequat nisl vel pretium lectus quam.</p>
+                        <a class="more" href="#">Show More</a>
+                    </div>
+                </div>
+                <div class="article article3">
+                    <img src="/Newsfeed-App/images/dunk1.jpg">
+                    <div class="articleInfo">
+                        <h3>Article 3</h3>
+                        <p>Nascetur ridiculus mus mauris vitae ultricies leo. Adipiscing commodo elit at imperdiet. Consequat nisl vel pretium lectus quam.</p>
+                        <a class="more" href="#">Show More</a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- PlayOffs tab section -->
+            <section id="playOffs" class="tabContent" style="display:none">
+                <div class="article article4">
+                    <img src="/Newsfeed-App/images/dunk1.jpg">
+                    <div class="articleInfo">
+                        <h3>Article 4</h3>
+                        <p>Nascetur ridiculus mus mauris vitae ultricies leo. Adipiscing commodo elit at imperdiet. Consequat nisl vel pretium lectus quam.</p>
+                        <a class="more" href="#">Show More</a>
+                    </div>
+                </div>
+                <div class="article article5">
+                    <img src="/Newsfeed-App/images/dunk1.jpg">
+                    <div class="articleInfo">
+                        <h3>Article 5</h3>
+                        <p>Nascetur ridiculus mus mauris vitae ultricies leo. Adipiscing commodo elit at imperdiet. Consequat nisl vel pretium lectus quam.</p>
+                        <a class="more" href="#">Show More</a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Stories tab section -->
+            <section id="stories" class="tabContent" style="display:none">
+                <div class="article article6">
+                    <img src="/Newsfeed-App/images/dunk1.jpg">
+                    <div class="articleInfo">
+                        <h3>Article 6</h3>
+                        <p>Nascetur ridiculus mus mauris vitae ultricies leo. Adipiscing commodo elit at imperdiet. Consequat nisl vel pretium lectus quam.</p>
+                        <a class="more" href="#">Show More</a>
+                    </div>
+                </div>
+                <div class="article article7">
+                    <img src="/Newsfeed-App/images/dunk1.jpg">
+                    <div class="articleInfo">
+                        <h3>Article 7</h3>
+                        <p>Nascetur ridiculus mus mauris vitae ultricies leo. Adipiscing commodo elit at imperdiet. Consequat nisl vel pretium lectus quam.</p>
+                        <a class="more" href="#">Show More</a>
+                    </div>
+                </div>
+            </section>
+            <!-- Teams tab section -->
+            <section id="teams" class="tabContent" style="display:none">
+                <div class="article article8">
+                    <img src="/Newsfeed-App/images/dunk1.jpg">
+                    <div class="articleInfo">
+                        <h3>Article 8</h3>
+                        <p>Nascetur ridiculus mus mauris vitae ultricies leo. Adipiscing commodo elit at imperdiet. Consequat nisl vel pretium lectus quam.</p>
+                        <a class="more" href="#">Show More</a>
+                    </div>
+                </div>
+                <div class="article article9">
+                    <img src="/Newsfeed-App/images/dunk1.jpg">
+                    <div class="articleInfo">
+                        <h3>Article 9</h3>
+                        <p>Nascetur ridiculus mus mauris vitae ultricies leo. Adipiscing commodo elit at imperdiet. Consequat nisl vel pretium lectus quam.</p>
+                        <a class="more" href="#">Show More</a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Players tab section -->
+            <section id="players" class="tabContent" style="display:none">
+                <div class="article article10">
+                    <img src="/Newsfeed-App/images/dunk1.jpg">
+                    <div class="articleInfo">
+                        <h3>Article 10</h3>
+                        <p>Nascetur ridiculus mus mauris vitae ultricies leo. Adipiscing commodo elit at imperdiet. Consequat nisl vel pretium lectus quam.</p>
+                        <a class="more" href="#">Show More</a>
+                    </div>
+                </div>
+                <div class="article article11">
+                    <img src="/Newsfeed-App/images/dunk1.jpg">
+                    <div class="articleInfo">
+                        <h3>Article 11</h3>
+                        <p>Nascetur ridiculus mus mauris vitae ultricies leo. Adipiscing commodo elit at imperdiet. Consequat nisl vel pretium lectus quam.</p>
+                        <a class="more" href="#">Show More</a>
+                    </div>
+                </div>
+            </section>
+        </main>
+        
+        <footer>
+            <div class="copyright">
+                <p><i class="far fa-copyright"></i> Copyright 2019</p>
+            </div>
+            <div class="links">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+        </footer>
+        <script src="index.js"></script>
+    </body>
+</html>

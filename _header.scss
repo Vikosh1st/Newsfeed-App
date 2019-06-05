@@ -30,13 +30,18 @@ header {
         color: white;
     }
 }
+
 .searchBar {
     display: flex;
     justify-content: center;
     align-items: center;
 
+    .toggleSearch {
+        display: none;
+    }
+
     form {
-        width: 400px;
+        width: 100%;
         display: flex;
         justify-content: center;
         position: relative;
@@ -78,5 +83,44 @@ header {
         height: 50px;
         border-radius: 50%;
         margin-left: 15px;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .container {
+        width: 100%;
+        margin: 0px 20px;
+    }
+
+    .searchBar {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    
+        .toggleSearch {
+            display: inline-block;
+            font-size: 20px;
+            border-radius: 20px;
+            padding: 9px;
+        }
+
+        form {
+            width: 100%;
+            height: 60px;
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 100%;
+            padding: 10px;
+            z-index: -1;
+            display: none;
+            transform: translateY(-100%);
+
+            &.is-active {
+                display: block;
+                transform: translateY(0);
+            }
+            
+        }
     }
 }

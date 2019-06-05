@@ -1,5 +1,4 @@
 body {
-  margin: 0;
   font-family: 'Roboto', sans-serif;
   margin: 0 auto;
   background: #f0f0f0;
@@ -71,8 +70,12 @@ header {
           align-items: center;
 }
 
+.searchBar .toggleSearch {
+  display: none;
+}
+
 .searchBar form {
-  width: 400px;
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -125,6 +128,48 @@ header {
   margin-left: 15px;
 }
 
+@media only screen and (max-width: 768px) {
+  .container {
+    width: 100%;
+    margin: 0px 20px;
+  }
+  .searchBar {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .searchBar .toggleSearch {
+    display: inline-block;
+    font-size: 20px;
+    border-radius: 20px;
+    padding: 9px;
+  }
+  .searchBar form {
+    width: 100%;
+    height: 60px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 100%;
+    padding: 10px;
+    z-index: -1;
+    display: none;
+    -webkit-transform: translateY(-100%);
+            transform: translateY(-100%);
+  }
+  .searchBar form.is-active {
+    display: block;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
 main {
   width: 100%;
   margin: 50px 0px;
@@ -150,31 +195,27 @@ nav {
           justify-content: space-between;
   border: solid 1px lightgray;
   background: white;
+  overflow: hidden;
 }
 
 nav .navButtons a {
-  padding: 10px;
+  padding: 12px;
   font-weight: bold;
-}
-
-nav .navButtons .border {
+  font-size: 18px;
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: none;
+  border-bottom: 4px solid transparent;
   display: inline-block;
   color: #17408B;
-  text-decoration: none;
 }
 
-nav .navButtons .border::after {
-  content: '';
-  display: block;
-  width: 0;
-  height: 3px;
-  background: #17408B;
-  -webkit-transition: width .5s;
-  transition: width .5s;
+nav .navButtons a:hover {
+  border-bottom: 4px solid #C9082A;
 }
 
-nav .navButtons .border:hover::after {
-  width: 100%;
+nav .navButtons .active {
+  border-bottom: 4px solid #C9082A;
 }
 
 nav .navFilter {
@@ -205,7 +246,7 @@ section {
 
 section .article {
   height: 200px;
-  margin: 20px 0px;
+  margin-top: 20px;
   border: solid 1px lightgray;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -220,7 +261,8 @@ section .article {
   background: white;
 }
 
-section .article .articleImage img {
+section .article img {
+  max-width: 300px;
   height: 100%;
 }
 
@@ -232,7 +274,101 @@ section .article .articleInfo p {
   padding-bottom: 10px;
 }
 
+@media only screen and (max-width: 768px) {
+  main {
+    width: 100%;
+    margin: 50px 0px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  nav {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    border: solid 1px lightgray;
+    background: white;
+    overflow: hidden;
+  }
+  nav .navButtons a {
+    padding: 12px;
+    font-weight: bold;
+    font-size: 18px;
+    text-align: center;
+    text-transform: uppercase;
+    text-decoration: none;
+    border-bottom: 4px solid transparent;
+    display: inline-block;
+    color: #17408B;
+  }
+  nav .navButtons a:hover {
+    border-bottom: 4px solid #C9082A;
+  }
+  nav .navButtons .active {
+    border-bottom: 4px solid #C9082A;
+  }
+  nav .navFilter {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    color: #17408B;
+    margin-right: 10px;
+  }
+  nav .navFilter a:visited {
+    color: #17408B;
+  }
+  section {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  section .article {
+    margin-top: 20px;
+    border: solid 1px lightgray;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    background: white;
+  }
+  section .article img {
+    width: 100%;
+  }
+  section .article .articleInfo {
+    padding-left: 15px;
+  }
+  section .article .articleInfo p {
+    padding-bottom: 10px;
+  }
+}
+
 footer {
+  background-color: white;
   height: 50px;
   display: -webkit-box;
   display: -ms-flexbox;

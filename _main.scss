@@ -12,30 +12,27 @@ nav {
     justify-content: space-between;
     border: solid 1px lightgray;
     background: white;
+    overflow: hidden;
 
     .navButtons {
         a {
-            padding: 10px;
+            padding: 12px;
             font-weight: bold;
-        }
-    
-        .border {
+            font-size: 18px;
+            text-align: center;
+            text-transform: uppercase;
+            text-decoration: none;
+            border-bottom: 4px solid transparent;
             display: inline-block;
             color: $primary-color;
-            text-decoration: none;
         }
-        
-        .border::after {
-            content: '';
-            display: block;
-            width: 0;
-            height: 3px;
-            background: $primary-color;
-            transition: width .5s;
+    
+        a:hover {
+            border-bottom: 4px  solid $secondary-color;
         }
-        
-        .border:hover::after {
-            width: 100%;
+
+        .active {
+            border-bottom: 4px  solid $secondary-color;
         }
     }
 
@@ -54,25 +51,102 @@ section {
     width: 80%;
     display: flex;
     flex-direction: column;
+    
     .article {
         height: 200px;
-        margin: 20px 0px;
+        margin-top: 20px;
         border: solid 1px lightgray;
         display: flex;
         flex-direction: row;
         justify-content: flex-start;
         background: white;
     
-        .articleImage {
-            img {
-                height: 100%;
-            }
+        img {
+            max-width: 300px;
+            height: 100%;
         }
 
         .articleInfo {
             padding-left: 15px;
             p {
                 padding-bottom: 10px;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    main {
+        width: 100%;
+        margin: 50px 0px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    nav {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        border: solid 1px lightgray;
+        background: white;
+        overflow: hidden;
+    
+        .navButtons {
+            a {
+                padding: 12px;
+                font-weight: bold;
+                font-size: 18px;
+                text-align: center;
+                text-transform: uppercase;
+                text-decoration: none;
+                border-bottom: 4px solid transparent;
+                display: inline-block;
+                color: $primary-color;
+            }
+        
+            a:hover {
+                border-bottom: 4px  solid $secondary-color;
+            }
+    
+            .active {
+                border-bottom: 4px  solid $secondary-color;
+            }
+        }
+    
+        .navFilter {
+            display: flex;
+            align-items: center;
+            color: $primary-color;
+            margin-right: 10px;
+            a:visited {
+                color: $primary-color;
+            }
+        }
+    }
+
+    section {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        
+        .article {
+            margin-top: 20px;
+            border: solid 1px lightgray;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            background: white;
+        
+            img {
+                width: 100%;
+            }
+    
+            .articleInfo {
+                padding-left: 15px;
+                p {
+                    padding-bottom: 10px;
+                }
             }
         }
     }
